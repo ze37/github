@@ -3,10 +3,17 @@ import './src/styles/generic/reset.css'
 import './src/styles/elements/base.css'
 
 import BoardGame from "./src/Objects/BoardGame/"
+import PlayerName from './src/components/PlayerGame'
 
 const $root = document.querySelector('#root')
-const $htmlBoardGame = BoardGame(6)
 
+$root.insertAdjacentHTML(
+    'beforeend',
+    `
+        ${PlayerName("Player1")}
+        ${PlayerName("Player2")}
+        ${BoardGame(6)}
+    `
 
-$root.insertAdjacentHTML('beforeend',$htmlBoardGame )
+)
 

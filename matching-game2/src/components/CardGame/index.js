@@ -1,11 +1,11 @@
 import "./style.css"
-function CardeGame (){
+function CardeGame (icon = "alura-pixel 1",alt = "Logo da Alura"){
     return `
 
         
         
         <article class="card-game">
-            <img src="images/alura-pixel 1.png" alt="Logo da Alura">
+            <img src="images/${icon}.png" alt="${alt}">
         </article>
     `;
 }

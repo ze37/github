@@ -1,10 +1,14 @@
 import CardeGame from "../CardGame"
-
+import "./style.css"
 function CardFrontBack(){
     return /*html*/`
         <article class="card-front-back">
-            ${CardeGame()}
-            ${CardeGame("javascript","Logo do javascript")}
+            <div class="card -front">
+                ${CardeGame()}
+            </div>
+            <div class="card -back">
+                ${CardeGame("javascript","Logo do javascript")}
+            </div>    
         </article>
 
     `

@@ -6,9 +6,9 @@ function ScoreBoard(){
     return /*html*/`
         <header class="score-board">
             ${PlayerName("Player1")}
-            ${PlayerScore(1)}
+            ${PlayerScore(2)}
             ${VsPlayer()}
-            ${PlayerScore()}
+            ${PlayerScore(3)}
             ${PlayerName("Player2")}
         </header>
     `

@@ -1,9 +1,8 @@
 import React from "react";
+import "./style.css"
 
 const Card = ()=>(
-    <article className="card">
-        Card
-    </article>
+    <article className="card"></article>
 
 )
 

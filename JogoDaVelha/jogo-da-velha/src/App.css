@@ -1,5 +1,6 @@
 .app{
-    align-items: center;
+    /*align-items: center;*/
+    text-align: center;
 }
 .app > .header{
     width: 90vw;

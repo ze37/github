@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 import Input from "../Input";
 import Label from "../Label"
 

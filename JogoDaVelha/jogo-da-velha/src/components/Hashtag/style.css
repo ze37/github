@@ -8,8 +8,6 @@
     background-color: var(--color-third) ;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 3px ;
-    grid-row-gap:3.5px;
     
 }
 
@@ -17,4 +15,23 @@
     background-color: var(--color-zero);
     display: flex;
     justify-content: center;
+}
+.hashtag > .item:nth-child(2){
+
+    justify-content: space-between;
+}
+
+.hashtag > .item:nth-child(2)::before, .hashtag > .item:nth-child(2)::after{
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: red; 
+    border-top-left-radius: 1.5px;
+    border-top-right-radius: 1,5px;
+
+}
+.hashtag > .item:nth-child(5){
+    border: 3px solid red;
+    
+
 }

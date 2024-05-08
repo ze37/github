@@ -1,5 +1,5 @@
 .input{
-
+    display: none;
 
 }
 .label::before{
@@ -12,4 +12,7 @@
     width: 20px;
     height: 20px;
 
+}
+.input:checked + .label::before{
+    background-color: var(--color-first);
 }

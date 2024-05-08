@@ -6,7 +6,7 @@ import Label from "../Label"
 const Checkbox = ({id = "",value = "", content = ""})=>(
     <>
         <Input id={id} value={value} type="checkbox" content={content}/>
-        <Label htmlFor={id} content={content}/>
+        <Label  htmlFor={id} content={content}/>
     </>
 )
 

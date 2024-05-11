@@ -76,6 +76,7 @@
     border-right-width: 4px;
     border-top-width: 4px ;
     border-bottom-width: 4px;
+    
 }
 .hashtag > .item:nth-child(6)::before,
 .hashtag > .item:nth-child(6)::after{

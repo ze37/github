@@ -1,5 +1,5 @@
 import React from "react";
-
-const About = ()=> <article className="about">Ze neto</article>
+import "./style.css"
+const About = ()=> <article className="about"></article>
 
 export default About

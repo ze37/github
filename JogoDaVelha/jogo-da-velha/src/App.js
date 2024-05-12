@@ -6,6 +6,7 @@ import About from "./object/About"
 import Header from "./components/Header";
 import Hashtag from "./components/Hashtag";
 import AboutLink from "./object/AboutLink";
+import IconClose from "./object/IconClose";
 
 const App = ()=> (
     <main className="app">
@@ -14,6 +15,7 @@ const App = ()=> (
       <Checkbox id="show" value="show" type="checkbox" content="Mostrar eventos"/>
       <About>
         <AboutLink className="-light" />
+        <IconClose />
       </About>
 
 

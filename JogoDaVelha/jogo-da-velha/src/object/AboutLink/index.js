@@ -1,8 +1,10 @@
 import React from "react";
 import './style.css'
-const AboutLink = ()=>{
+const AboutLink = ({className=""})=>(
+    <a href="#to-do" className={`about-link ${className}`}>
+        Sobre
+    </a>
+)
 
-    return(<a href="#to-do" className="aboutlink">Sobre</a>)
-}
 
 export default AboutLink

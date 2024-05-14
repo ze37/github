@@ -5,9 +5,7 @@ import Checkbox from "./object/Checkbox";
 import About from "./object/About"
 import Header from "./components/Header";
 import Hashtag from "./components/Hashtag";
-import LogoCollab from "./object/LogoCollab";
-import AboutLink from "./object/AboutLink";
-import IconClose from "./object/IconClose";
+import HeaderInternal from "./components/HeaderInternal";
 
 const App = ()=> (
     <main className="app">
@@ -15,12 +13,8 @@ const App = ()=> (
       <Hashtag />
       <Checkbox id="show" value="show" type="checkbox" content="Mostrar eventos"/>
       <About>
-        <LogoCollab light />
-        <AboutLink className="-light" />
-        <IconClose />
+        <HeaderInternal />
       </About>
-
-
     </main> 
 )
 

@@ -1,9 +1,16 @@
-//import React from "react";
+import React from "react";
 
-//const HeaderInternal = ()=>(
-//    <header className="header-internal">
+import LogoCollab from "../../object/LogoCollab";
+import AboutLink from "../../object/AboutLink";
+import IconClose from "../../object/IconClose";
 
-//    </header>
-//)
+const HeaderInternal = ()=>(
+    <header className="header-internal">
+        <LogoCollab light />
+        <AboutLink className="-light" />
+        <IconClose />
 
-//export default HeaderInternal
+    </header>
+)
+
+export default HeaderInternal

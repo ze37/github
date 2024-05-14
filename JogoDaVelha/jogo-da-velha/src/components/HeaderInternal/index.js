@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 import LogoCollab from "../../object/LogoCollab";
 import AboutLink from "../../object/AboutLink";

@@ -1,9 +1,16 @@
+import React from 'react';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
 
-function App() {
-  return (
-    <h1>Ola mundo</h1>
-  );
-}
+
+const App = ()=> (
+
+      < div className = "App" >
+        
+        <HelloWorld />
+        </div >
+        
+  )
+
 
 export default App;

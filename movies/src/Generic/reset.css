@@ -10,3 +10,9 @@ ol {
   padding: 0;
   margin: 0;
 }
+.cards{
+  display: flex;
+  gap:5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

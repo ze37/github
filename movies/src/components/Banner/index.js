@@ -1,11 +1,9 @@
 import "./banner.css"
 
-function Banner (){
+function Banner ({image}){
   return(
-    <div className="banner">
-
-    </div>
-
+    <div className="banner" style={{backgroundImage:`url('/img/banner-${image}.png')`}}
+    ></div>
   )
 }
 

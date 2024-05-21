@@ -3,6 +3,7 @@ import Card from "./components/Cards";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import videos from "./json/db.json"
 
 function App() {
   return (
@@ -12,11 +13,11 @@ function App() {
       <Container>
         <h2>Geografia</h2>
         <section className="cards">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {
+            videos.map((video) =>{
+              return <Card id={video.id} />
+            })
+          }
         </section>
 
       </Container>

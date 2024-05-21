@@ -13,11 +13,7 @@ function App() {
       <Container>
         <h2>Geografia</h2>
         <section className="cards">
-          {
-            videos.map((video) =>{
-              return <Card id={video.id} />
-            })
-          }
+          {videos.map((video) =><Card id={video.id} key={video.id} />)}
         </section>
 
       </Container>

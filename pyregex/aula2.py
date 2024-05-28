@@ -1,6 +1,7 @@
 # Meta caractere . ^ $ * + ? { } [ ] % | ( ) 
 # | ou
 # . Qualquer caractere (com exceção de quebra de linha)
+# [] conjunto de caracteres16
 
 import re
 
@@ -16,4 +17,5 @@ Nao canso de ouvir a Maria:
 "Jooooooooooãoooo o cafe ta protinho aqui. veeeemmm"
 '''
 print(re.findall(r'João|Maria',texto))
-print(re.findall(r'[Jj]o.o|maria|Maria',texto))
+print(re.findall(r'JOÃo|marIa|Maria',texto,flags=re.I))
+print(re.findall(r'[a-zA-Z]o.o|marIa|Maria',texto,))

@@ -8,12 +8,14 @@ from pprint import pprint
 texto = '''
 <p>fraze 1</p><p>fraze 2</p><p>fraze 3</p><div>fraze 4</div>
 '''
-cpf = '134.547.362-32'
+#cpf = '134.547.362-32'
 
-pprint(re.findall(r'[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}',cpf))
+#pprint(re.findall(r'((?:[0-9]{3}\.){2}[0-9]{3}-[0-9]{2})',cpf))
+ 
 #tags = re.findall(r'<([pdiv]{1,3})>(?:.*?)<\/\1>',texto)
 #pprint(tags)
 
+print(re.sub(r'(<(.+?)>)(.+?)(<\/\2>)',r'\1"\3"\4', texto))
 #for tag in tags:
  #   um, dois, tres= tag
   #  print(tres)

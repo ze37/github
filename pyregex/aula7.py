@@ -14,3 +14,5 @@ Nao canso de ouvir a Maria:
 
 '''
 print(re.findall(r'[a-z]+', texto))
+print(re.findall(r'[a-z]+', texto))
+print(re.findall(r'[a-z]+', texto))

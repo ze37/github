@@ -82,9 +82,25 @@ class Manager:
 
 
     def update(self):
-        pass
+        print()
+        print("=========================ATUALIZAR CADASTROS=========================")
+        name = input("DIGITE O NOME DO CLIENTE PARA ATUALIZAR : ")
+        confirm = input("TEM CERTEZA ? (Y/N)")
+        if confirm == "y".lower():
+            db = sqlite3.connect("connection")
+            cursor = db.cursor()
+            phone_update = input("ATUALIZAR TELEFONE ? (Y/N)")
+            if phone_update == "y".lower():
+                phone = input("DIGITE O NUMERO DE TELEFONE : ")
+                cursor.execute("UPDATE  contacts SET Phone = ? WHERE Name = ?",(phone,name))
+                db.commit()
+                print("CADASTRO ATUALIZADO COM SUCESSO...")
+                time.sleep(3)
     
-    
+
+
+
+
     def get_list(self):
         count = 0 
         count_2 = 0

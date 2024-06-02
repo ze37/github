@@ -10,32 +10,43 @@ class Manager:
     def add(self):
        running = True
        while running:
-           os.system("clear")
-           print("-------------ADCIONE UM NOVO CONTATO--------")
-           print()
-           self.name = input("Name : ")
-           time.sleep(0.20)
 
-           self.phone = input("Phone : ")
-           time.sleep(0.20)
+            os.system("clear")
+            print("-------------ADCIONE UM NOVO CONTATO--------")
+            print()
+            db = sqlite3.connect("connection")
+            cursor = db.cursor()
+            temp_name = input("Name: ")
+            cursor.execute("SELECT Name FROM contacts")
+            results = cursor.fetchall()
+            for i in results:
+                if temp_name in i:
+                    print("ESTE CONTATO JA EXISTE NO NOSSO BANCO DE DADOS")
+                    time.sleep(3)
+                    self.add()
+            self.name = temp_name 
+            temp_name = ""
+                  
+            time.sleep(0.20)
+            self.phone = input("Phone : ")
+           
+            time.sleep(0.20)
+            self.address = input("Address : ")
+            cursor.execute("""INSERT INTO contacts\
+                                   (Name ,Phone ,Address )VALUES(?,?,?)""",\
+                                   (self.name,self.phone,self.address))
+            db.commit()
+            add_more = input("DESEJA ADCIONAR OUTRO CONTATO? (Y/N) :")
+            if add_more == "y".lower():
+                        continue
+            else:
 
-           self.address = input("Address : ")
-           db = sqlite3.connect("connection")
-           cursor = db.cursor()
-           cursor.execute("""INSERT INTO contacts\
-                            (Name ,Phone ,Address )VALUES(?,?,?)""",\
-                            (self.name,self.phone,self.address))
-           db.commit()
-           add_more = input("DESEJA ADCIONAR OUTRO CONTATO? (Y/N) :")
-           if add_more == "y".lower():
-               continue
-           else:
-               db.close()
-               running = False
-               print("SAINDO DO MENU!!")
-               time.sleep(2)
-               self.menu()
-               
+                db.close()
+                running = False
+                print("SAINDO DO MENU!!")
+                time.sleep(2)
+                self.menu()
+                       
              
     def remover(self):
         pass
@@ -51,6 +62,7 @@ class Manager:
         cursor = db.cursor()
         os.system("clear")
         print("................CONTATOS................")
+
         time.sleep(0.50)
         cursor.execute("SELECT Name, phone,Address FROM contacts")
         results = cursor.fetchall()

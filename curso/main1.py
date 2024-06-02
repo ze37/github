@@ -59,7 +59,27 @@ class Manager:
                 time.sleep(2)
                 self.add()
     def remover(self):
-        pass
+        print()
+        print("=========================DELETAR CADASTROS=========================")
+        print("")
+
+        name = input("DIGITE O NOME DO CLIENTE PARA DELETAR : ")
+        confirm = input("TEM CERTEZA ? (Y/N)")
+        if confirm == "y".lower():
+            db = sqlite3.connect("connection")
+            cursor = db.cursor()
+            cursor.execute("DELETE FROM contacts WHERE Name = ?",(name,))
+            db.commit()
+            print("CADASTRO DELETADO COM SUCESSO...")
+            time.sleep(3)
+            self.menu()
+        else:
+            print("SAINDO DO MENU PRINCIPAL..")
+            time.sleep(3)
+            self.menu()
+
+
+
 
     def update(self):
         pass
@@ -79,6 +99,7 @@ class Manager:
         #print(results)
         #time.sleep(0.50)
         for row in results:
+            time.sleep(0.50)
             count += 1
             count_2 += 1
             print(count_2,row)
@@ -93,8 +114,8 @@ class Manager:
         option = input("APERTE (U) PARA ATUALIZAR (D) PARA DELETAR (M) PARA MENU : ")
         if option == "u".lower():
             self.update()
-        elif option == "r".lower():
-            self.remove()
+        elif option == "d".lower():
+            self.remover()
         elif option == "m".lower():
             self.menu()
 

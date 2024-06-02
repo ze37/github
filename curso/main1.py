@@ -55,7 +55,27 @@ class Manager:
         cursor.execute("SELECT Name, phone,Address FROM contacts")
         results = cursor.fetchall()
         print(results)
-        time.sleep(0.20)
+        time.sleep(0.50)
+        for row in results:
+            count += 1
+            count_2 += 1
+            print(count_2,row)
+            if count == 5:
+                input("PRECIONE QUALQUER TECLA PARA CONTINUAR ...")
+                count = 0
+                print()
+            print()
+            print("FINAL DOS RESULTADOS !!")
+            print()
+            print("PRECIONE QUALQUER TECLA PARA CONTINUAR")
+            option = input("APERTE (U) PARA ATUALIZAR (D) PARA DELETAR (M) PARA MENU : ")
+            if option == "u".lower():
+                self.update()
+            elif option == "r".lower():
+                self.remove()
+            elif option == "m".lower():
+                self.menu()
+
     
     def terminate(self):
         pass

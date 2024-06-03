@@ -97,8 +97,25 @@ class Manager:
                 print("CADASTRO ATUALIZADO COM SUCESSO...")
                 time.sleep(3)
     
-
-
+            
+            address_update = input("ATUALIZAR ENDERECO ? (Y/N)")
+            if address_update == "y".lower():
+                addrees = input("DIGITE O NOVO ENDEREÇO : ")
+                cursor.execute("UPDATE  contacts SET Address = ? WHERE Name = ?",(addrees,name))
+                db.commit()
+                time.sleep(3)
+            if phone_update != "y".lower() and address_update != 'y':
+                print("SAINDO DO MENU PRINCIPAL, SEM FAZER ATUALOZAÇÕES")
+                time.sleep(3)
+                self.menu()
+            print("ENDEREÇO ATUALIZADO COM SUCESSO...")
+            db.close()
+            time.sleep(3)
+            self.menu()
+        else:
+            print("SAINDO DO MENU PRINCIPAL, SEM FAZER ATUALOZAÇÕES")
+            time.sleep(3)
+            self.menu()
 
 
     def get_list(self):

@@ -142,6 +142,7 @@ class Manager:
             print()
         print()
         print("FINAL DOS RESULTADOS !!")
+        db.close()
         print()
         print("PRECIONE QUALQUER TECLA PARA CONTINUAR")
         option = input("APERTE (U) PARA ATUALIZAR (D) PARA DELETAR (M) PARA MENU : ")
@@ -154,8 +155,29 @@ class Manager:
 
     
     def terminate(self):
-        pass
-
+        confirm = input("DESEJA SAIR DO SISTEMA? (y/n)")
+        if confirm == "y".lower():
+            print("SAINDO DO SISTEMA")
+            self.beep()
+            self.beep()
+            self.beep()
+            time.sleep(2)
+            print("........")
+            time.sleep(0.05)
+            print(".....")
+            time.sleep(0.05)
+            print("....")
+            time.sleep(0.05)
+            print("...")
+            time.sleep(0.05)
+            print("..")
+            time.sleep(0.05)
+            print(".")
+            exit()
+        else:
+            print("SAINDO DO MENU PRINCIPAL...")
+            time.sleep(1)
+            self.menu()
     def beep(self):
         # Inicializa o mixer do pygame
         pygame.mixer.init(frequency=44100)

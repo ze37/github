@@ -177,19 +177,19 @@ class Manager:
 
         time.sleep(0.05)
         print()
-        print("1 :) Add")
+        print("1 :) CADASTRAR")
         
         time.sleep(0.05)
-        print("2 :) Update")
+        print("2 :) DELETAR")
 
         time.sleep(0.05)
-        print("3 :) Remover")
+        print("3 :) ATUALIZAR")
 
         time.sleep(0.05)
-        print("4 :) Get_list")
+        print("4 :) LISTAR")
 
         time.sleep(0.05)
-        print("5 :) Terminate")
+        print("5 :) SAIR")
         print()
         
         opcao = input("SELECIONE UMA ACAO : ")

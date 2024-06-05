@@ -33,14 +33,32 @@ entry = StringVar()
 enter_numero = Entry(root,textvariable=entry,width=15,bd=0,font=("arial",20),justify="center")
 enter_numero.place(x=84,y=270)
 
-
-pesquisar_image = PhotoImage(file="buttom2.png")
+# Botäo pesquizar o numero telefonico
+pesquisar_image = PhotoImage(file="texte2.png")
 pesquisar = Button(image=pesquisar_image,borderwidth=0,cursor="hand2",bd=0,font=("arial",15))
 pesquisar.place(x=64,y=305)
 
 
+box_pesquizar = PhotoImage(file="caixa.png")
+Label(root,image=box_pesquizar).place(x=6,y=380)
 
 
+cidade = Label(root,text="Cidade : ",bg="dim gray",fg="black", font=("arial",10,"bold"))
+cidade.place(x=50,y=390)
 
+sim = Label(root,text="Operadora : ",bg="dim gray",fg="black", font=("arial",10,"bold"))
+sim.place(x=200,y=390)
+
+paiz = Label(root,text="Paiz : ",bg="dim gray",fg="black", font=("arial",10,"bold"))
+paiz.place(x=50,y=470)
+
+zone = Label(root,text="Horario : ",bg="dim gray",fg="black", font=("arial",10,"bold"))
+zone.place(x=200,y=470)
+
+latitude = Label(root,text="Latitude : ",bg="dim gray",fg="black", font=("arial",10,"bold"))
+latitude.place(x=50,y=550)
+
+longitude = Label(root,text="Longitude : ",bg="dim gray",fg="black", font=("arial",10,"bold"))
+longitude.place(x=200,y=550)
 
 root.mainloop()

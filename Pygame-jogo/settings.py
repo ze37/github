@@ -7,6 +7,7 @@ HALTH_WIDTH = WIDTH // 2
 HALTH_HEIGTH = HEIGTH // 2
 
 #Configurando o fps do jogo
+TILE = 100
 FPS = 60
 
 

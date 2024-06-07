@@ -1,3 +1,4 @@
+import math
 # configuracoes basicas do nosso game
 WIDTH = 1200
 HEIGTH = 700
@@ -10,6 +11,11 @@ HALTH_HEIGTH = HEIGTH // 2
 TILE = 100
 FPS = 60
 
+FOV = math.pi / 3
+HELTH_FOV = FOV / 2
+NUM_RAYS = 120
+MAX_DEPTH = 800
+DELTA_ANGLE = FOV / NUM_RAYS
 
 
 #configuracoes dos jogadores

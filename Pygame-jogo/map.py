@@ -4,10 +4,10 @@ from settings import *
 text_map = [
     'WWWWWWWWWWWW',
     'W..........W',
+    'W...WW.....W',
     'W..........W',
     'W..........W',
-    'W..........W',
-    'W..........W',
+    'W.WW.......W',
     'WWWWWWWWWWWW'
 ]
 world_map = set()

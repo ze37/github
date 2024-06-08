@@ -3,7 +3,7 @@ import sqlite3
 con = sqlite3.connect("cinema.db")
 # criar um objeto cursor
 cur = con.cursor()
-#cur.execute("CREATE TABLE filme(titulo,ano,duracao)")
+cur.execute("CREATE TABLE filme(titulo,ano,duracao)")
 
 #res = cur.execute("SELECT titulo FROM filme")
 #print(res.fetchall())

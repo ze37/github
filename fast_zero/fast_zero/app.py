@@ -1,18 +1,8 @@
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
-
+from http import HTTPStatus
 app = FastAPI()
+from fast_zero.schemas import Message
 
-
-@app.get('/', response_class=HTMLResponse)
+@app.get('/',status_code=HTTPStatus.OK, response_model=Message)
 def read_root():
-    return """
-    <html>
-        <head>
-            <title>Nosso ola Mundo</title>
-        </head>
-        <body>
-            <h1>Olá Mundo</h1>
-        </body>
-    </html>
-    """
+    return {'message': 'Olá Mundo!'}
